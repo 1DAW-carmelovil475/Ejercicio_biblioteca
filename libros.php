@@ -4,7 +4,7 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-include(__DIR__.'/src/functions.php');
+require_once __DIR__.'/src/functions.php' ;
 require_once __DIR__.'/conexion.php';
 
 function contarDisponibles(PDO $pdo): int{
@@ -22,7 +22,7 @@ function obtenerLibro(PDO $pdo, int $id): array|false{
 }
 
 function listarLibros(PDO $pdo, ?string $genero = null): array{
-    
+
     if($genero === null){
 
         $sql = 'SELECT * FROM libros ORDER BY titulo';
