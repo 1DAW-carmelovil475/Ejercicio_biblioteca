@@ -1,0 +1,9 @@
+<!-- Funciones que hablan con la base de datos -->
+
+<?php
+
+    function dump($var){
+        echo '<pre>'.print_r($var,1).'</pre>';
+    }
+
+?>
